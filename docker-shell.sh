@@ -15,7 +15,6 @@ docker build -t data-version-cli -f Dockerfile .
 
 echo "Running container"
 docker run --rm --name data-version-cli -ti \
---privileged \
 --cap-add SYS_ADMIN \
 --device /dev/fuse \
 -v "$BASE_DIR":/app \
